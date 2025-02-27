@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Proxon";
+  src: local("Proxon"),
+    url("./Fonts/PROXON.ttf") format("truetype");
+}
+
+.font-Proxon {
+  font-family: "Proxon", sans-serif;
+}
+
+@font-face {
+  font-family: "VTFJustinaGeo";
+  src:url("https://exfont.com/vtf-justina-geo-light.font") format("opentype");
+}
+
+.font-VTFJustinaGeo {
+  font-family: "VTFJustinaGeo", sans-serif;
+}
