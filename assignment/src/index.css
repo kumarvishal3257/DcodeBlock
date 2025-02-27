@@ -10,11 +10,28 @@
   font-family: "Proxon", sans-serif;
 }
 
-@font-face {
-  font-family: "VTFJustinaGeo";
-  src:url("https://exfont.com/vtf-justina-geo-light.font") format("opentype");
+/* Existing styles... */
+
+@keyframes slider {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }
 
-.font-VTFJustinaGeo {
-  font-family: "VTFJustinaGeo", sans-serif;
+.animate-slider {
+    display: flex;
+    animation: slider 5s linear infinite;
 }

@@ -1,8 +1,10 @@
-import React from 'react'
+
 import bgVideo from '../assets/bg-video.mp4'
 import hackIndiaLogo from '../assets/hackIndiaLogo.png'
 import Button from './Button'
 import singularityLogo from '../assets/singularity.png'
+import collegesLogo1 from '../assets/collegesLogo1.png'
+import collegesLogo2 from '../assets/collegesLogo2.png'
 
 const HeroSection = () => {
     const btnContent = ['Overview', 'Create Team', 'Prizes & Sponsors', 'FAQs', 'Judging & Rules', 'Resources']
@@ -11,8 +13,15 @@ const HeroSection = () => {
         width: "auto",
         dropShadow: "drop-shadow-[0_0_7_rgba(83,211,224,1)]"
     }
+    const registerBtStyle = {
+        fontSize: "text-lg",
+        width: "auto",
+        height: "59",
+        fontStyle: "font-VTFJustinaGeo",
+    }
   return (
-    <div className=''>
+    <div className='relative overflow-hidden w-full h-auto'>
+
         <video autoPlay loop muted className='w-full min-h-[100%] object-cover relative right-0 left-0'>
             <source src={bgVideo} type='video/mp4' />
         </video>
@@ -45,9 +54,34 @@ const HeroSection = () => {
 
             {/* Description box */}
             <div className='text-white font-bold text-3xl flex justify-center mx-auto mt-4 text-VTFJustinaGeo'>
-                <h3>India's Biggest Web3 & AI Hackathon</h3>
+                <h3>India&apos;s Biggest Web3 & AI Hackathon</h3>
+
+            </div>
+
+            {/* Date section */}
+            <div className='h-auto w-[30%] flex justify-center mx-auto border-[1px] border-[rgba(217,217,217,0.3)] bg-linear-[25deg,rgba(106,23,153,1)_5%,rgba(35,8,51,1)_60%] rounded-xl py-2 px-7 mt-7 drop-shadow-[0_1_4_rgba(217,217,217,0.3)]'>
+                <p className='text-white text-VTFJustinaGeo'>February 28 - September 28</p>
+            </div>
+
+            {/* Stats section */}
+            <div className='w-[60%] h-auto text-white text-2xl flex justify-center mx-auto mt-8 font-bold py-1 text-VTFJustinaGeo'>
+                <p className='border-r-[2px] pr-7'><span className='text-orange-400'>$150+ </span>Price Pool</p>
+                <p className='border-r-[2px] px-7'><span className='text-orange-400'>150+ </span>University</p>
+                <p className='pl-7'><span className='text-orange-400'>25,000+ </span>Students</p>
+            </div>
+
+            {/* Register button */}
+            <div className='w-[30%] h-auto flex justify-center mx-auto mt-8'>
+                <Button textContent='Register now!' style={registerBtStyle}/>
             </div>
         </div>
+
+        <footer className='relative overflow-hidden w-full h-[90px] bg-[#D9D9D9]'>
+            <div className='flex animate-slider'>
+                <img src={collegesLogo1} alt='CollegesLogo' className='w-full h-[95px]'/>
+                <img src={collegesLogo2} alt='CollegesLogo' className='w-full h-[95px]'/>
+            </div>
+        </footer>
     </div>
   )
 }
